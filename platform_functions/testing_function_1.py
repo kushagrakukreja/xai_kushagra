@@ -1,12 +1,12 @@
 # multiplication_table.py
 
-def print_multiplication_table(number):
+def testing_function_1(number):
     for i in range(1, 11):
         print(f"{number} x {i} = {number * i}")
 
 if __name__ == "__main__":
     try:
         num = int(input("Enter a number: "))
-        print_multiplication_table(num)
+        testing_function_1(num)
     except ValueError:
         print("That's not a number. Try again with a valid integer.")
