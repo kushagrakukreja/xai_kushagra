@@ -9,4 +9,4 @@ if __name__ == "__main__":
         num = int(input("Enter a number: "))
         testing_function_1(num)
     except ValueError:
-        print("That's not a number. Try again with a valid integer.")
+        print("That's not a number. Please try again with a valid integer.")
