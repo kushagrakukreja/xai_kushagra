@@ -1,6 +1,6 @@
 # multiplication_table.py
 
-def testing_function_1(number,config=none):
+def testing_function_1(number,config="none"):
     for i in range(1, 11):
         print(f"{number} x {i} = {number * i}")
 
