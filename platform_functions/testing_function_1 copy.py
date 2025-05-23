@@ -1,16 +1,19 @@
-# multiplication_table.py
+import json
 
 def testing_function_1(number, config="none"):
     output = []
     for i in range(1, 11):
-        result = number * i  # Proper math, not string multiplication
-        output.append(f"{number} x {i} = {result}")
-    return "\n".join(output)
+        result = number * i
+        output.append({
+            "expression": f"{number} x {i}",
+            "result": result
+        })
+    return output
 
 if __name__ == "__main__":
     try:
         num = int(input("Enter a number: "))
         result = testing_function_1(num)
-        print(result)
+        print(json.dumps(result, indent=2))
     except ValueError:
         print("That's not a number. Please try again with a valid integer.")
