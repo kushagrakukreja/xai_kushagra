@@ -16,4 +16,4 @@ if __name__ == "__main__":
         result = testing_function_1(num)
         print(json.dumps(result, indent=2))
     except ValueError:
-        print("That's not a number. Please try again with a valid integergggs")
+        print("That's not a number. Please try again with a valid integergggg")
