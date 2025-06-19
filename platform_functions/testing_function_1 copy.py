@@ -12,7 +12,7 @@ def testing_function_1(number, config="none"):
 
 if __name__ == "__main__":
     try:
-        num = int(input("Enter a number: "))
+        num = int(input("Enter a numbers: "))
         result = testing_function_1(num)
         print(json.dumps(result, indent=2))
     except ValueError:
