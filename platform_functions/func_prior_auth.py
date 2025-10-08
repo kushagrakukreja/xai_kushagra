@@ -13,7 +13,7 @@ def func_prior_auth(number, config="none"):
 if __name__ == "__main__":
     try:
         num = int(input("Enter a number: "))
-        result = testing_function_1(num)
+        result = func_prior_auth(num)
         print(json.dumps(result, indent=2))
     except ValueError:
         print("That's not a number. Please try again with a valid integer.")
