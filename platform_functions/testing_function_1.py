@@ -2,7 +2,7 @@ import json
 
 def testing_function_1(number, config="none"):
     output = []
-    for i in range(1, 121):
+    for i in range(1, 1221):
         result = number * i
         output.append({
             "expression": f"{number} x {i}",
