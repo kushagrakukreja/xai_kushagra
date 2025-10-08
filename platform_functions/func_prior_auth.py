@@ -2,7 +2,7 @@ import json
 
 def func_prior_auth(number, config="none"):
     output = []
-    for i in range(1, 13):
+    for i in range(1, 15):
         result = number * i
         output.append({
             "expression": f"{number} x {i}",
