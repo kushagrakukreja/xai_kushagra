@@ -10,7 +10,7 @@
     },
     {
       "function_name": "func_prior_auth",
-      "function_file_path": "platform_functions/testing_function_1_copy.py"
+      "function_file_path": "platform_functions/func_prior_auth.py"
     },
     {
       "function_name": "testing_function_1 copysdfsdfsk",
