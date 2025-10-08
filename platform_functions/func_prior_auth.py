@@ -1,6 +1,6 @@
 import json
 
-def testing_function_1(number, config="none"):
+def func_prior_auth(number, config="none"):
     output = []
     for i in range(1, 11):
         result = number * i
