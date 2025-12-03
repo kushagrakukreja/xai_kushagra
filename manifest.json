@@ -5,8 +5,8 @@
       "function_file_path": "platform_functions/testing_function_1.py"
     },
     {
-      "function_name": "send_email.py",
-      "function_file_path": "platform_functions/send_email.py"
+      "function_name": "sendemail.py",
+      "function_file_path": "platform_functions/sendemail.py"
     },
     {
       "function_name": "func_prior_auth",
