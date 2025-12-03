@@ -69,7 +69,7 @@ def sendemail(
     # A downstream task can pick this up and actually send the email.
     return {
         "subject": subject,
-        "body": json.dumps(body_dict, indent=2),
+        "body": body_dict,
     }
 
 
