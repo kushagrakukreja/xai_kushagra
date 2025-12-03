@@ -5,7 +5,7 @@
       "function_file_path": "platform_functions/testing_function_1.py"
     },
     {
-      "function_name": "sendemail.py",
+      "function_name": "sendemail",
       "function_file_path": "platform_functions/sendemail.py"
     },
     {
