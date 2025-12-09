@@ -1,7 +1,11 @@
 import os
+import uuid
+
 import requests
 
 from xpms_rules.models.rules import Ruleset
+from xpms_rules.triggers.execute_rulesets import ExecuteRuleset
+from xpms_common.utils import publish_mq_message
 
 
 def client_ruleset_execution(**kwargs):
@@ -39,4 +43,18 @@ def client_ruleset_execution(**kwargs):
         "solution_id": "sol31"
     }
 
-    requests.post(f"http://mq-proxy.red6.discovery.xpms.ai/execute_ruleset", json=inp_payload)  # noqa: S113
+    from xpms_common.mq_endpoint import MQMessage
+
+    msg = MQMessage()
+    msg.solution_id = solution_id
+    msg.agent_id = agent_id
+    msg.data = inp_payload.get("data")
+    msg.user_id = kwargs.get("config").get("context").get("user_id")
+    msg.trigger = "execute_ruleset"
+    msg.routing_key = "system.system.run_dag"
+    msg.request_id = str(uuid.uuid4())
+    msg.context = kwargs.get("config").get("context")
+
+    handler = ExecuteRuleset(context=msg.context, message=msg.to_json())
+    return handler.run()
+
