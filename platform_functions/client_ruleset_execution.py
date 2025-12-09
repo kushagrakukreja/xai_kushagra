@@ -39,4 +39,4 @@ def client_ruleset_execution(**kwargs):
         "solution_id": "sol31"
     }
 
-    requests.post(f"http://{os.getenv('API_GATEWAY_URL')}/execute_ruleset", json=inp_payload)  # noqa: S113
+    requests.post(f"http://mq-proxy.red6.discovery.xpms.ai/execute_ruleset", json=inp_payload)  # noqa: S113
