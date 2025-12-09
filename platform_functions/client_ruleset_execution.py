@@ -30,7 +30,6 @@ def client_ruleset_execution(**kwargs):
     execution_method = kwargs.get("execution_method", "Sequential")
 
     kwargs.pop("Client_Name")
-    kwargs.pop("config")
     kwargs.update({
         "run_all_exclusions": run_all_exclusions,
         "ruleset_ids": ruleset_ids,
