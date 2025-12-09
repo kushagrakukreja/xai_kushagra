@@ -1,6 +1,6 @@
 from xpms_rules.rule_service.utils import CustomOperatorParams
 
-def custom_line_amount_checker(config, input_obj: CustomOperatorParams):
+def line_amount_checker(config, input_obj: CustomOperatorParams):
     claim_obj = input_obj.l_val
 
     try:
