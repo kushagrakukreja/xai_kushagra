@@ -22,7 +22,8 @@
     },
     {
       "function_name": "line_amount_checker",
-      "function_category": "custom_operator",
+      "function_category": "Custom Operator",
+      "function_config_path": "platform_functions/function_configs/custom_equals_.json",
       "function_file_path": "platform_functions/custom/operator/line_amount_checker.py"
     }
     

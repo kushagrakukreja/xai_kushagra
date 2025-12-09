@@ -1,0 +1,10 @@
+{
+    "config": [
+      {
+        "l_val_type": [
+          "string", "int"
+        ],
+        "r_val_type": ["string", "int"]
+      }
+    ]
+  }
