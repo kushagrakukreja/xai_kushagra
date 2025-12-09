@@ -19,6 +19,11 @@
     {
       "function_name": "client_ruleset_execution",
       "function_file_path": "platform_functions/client_ruleset_execution.py"
+    },
+    {
+      "function_name": "line_amount_checker",
+      "function_category": "custom_operator",
+      "function_file_path": "platform_functions/custom/operator/line_amount_checker.py"
     }
     
   ]
