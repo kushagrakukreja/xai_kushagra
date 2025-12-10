@@ -36,7 +36,7 @@
       "function_name": "add_sum",
       "function_category": "Custom Action",
       "function_config_path": "platform_functions/function_configs/add_sum.json",
-      "function_file_path": "platform_functions/custom/action/add_sum.py"
+      "function_file_path": "platform_functions/custom/operator/add_sum.py"
     }
     
   ]
