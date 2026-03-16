@@ -4,13 +4,13 @@ import requests
 PRIOR_AUTH_API = "https://mq-proxy.twenty512.atlantis.xpms.ai/pipeline/dag/execute/workflow_355b9528-d463-48f9-8cc9-76cfe545b03a"
 CLAIMS_API = "https://mq-proxy.twenty512.atlantis.xpms.ai/pipeline/dag/execute/workflow_44f760e9-cabf-47e0-818a-820a2e15f83a"
 
+api_key = "AIzaSyBf_1aXOZjgf1fcEIDXy4_LewYrV5R75pg"
+gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
 
 
 
 def func_prior_auth(config, **input_obj) -> dict:
-    api_key = "AIzaSyBf_1aXOZjgf1fcEIDXy4_LewYrV5R75pg"
-    gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-
+    
     # Step 1: Classify the input JSON
     prompt = f"""Classify this healthcare JSON as 'prior_auth' or 'claim'.
 Reply ONLY with JSON: {{"classification": "prior_auth|claim|unknown", "confidence": "high|medium|low", "reasoning": "one sentence"}}
