@@ -4,11 +4,11 @@ import requests
 GEMINI_API_KEY = "AIzaSyBNWtSErzZGz7o9M9Tggj0LW_uG3uAAfyc"
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
 
-def func_prior_auth(data: dict, config=None) -> dict:
+def func_prior_auth(config, **input_obj) -> dict:
     prompt = f"""Classify this healthcare JSON as 'prior_auth' or 'claim'.
 Reply ONLY with JSON: {{"classification": "prior_auth|claim|unknown", "confidence": "high|medium|low", "reasoning": "one sentence"}}
 
-{json.dumps(data)}"""
+{json.dumps(input_obj)}"""
 
     r = requests.post(URL, json={
         "contents": [{"parts": [{"text": prompt}]}],
@@ -17,14 +17,3 @@ Reply ONLY with JSON: {{"classification": "prior_auth|claim|unknown", "confidenc
 
     r.raise_for_status()
     return json.loads(r.json()["candidates"][0]["content"]["parts"][0]["text"])
-
-
-if __name__ == "__main__":
-    try:
-        raw = input("Input JSON:")
-        result = func_prior_auth(json.loads(raw))
-        print(json.dumps(result, indent=2))
-    except json.JSONDecodeError:
-        print("Invalid JSON. Please paste valid JSON.")
-
-
