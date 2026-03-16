@@ -29,13 +29,27 @@ Reply ONLY with JSON: {{"classification": "prior_auth|claim|unknown", "confidenc
     target = classification.get("classification")
 
     if target == "prior_auth":
-        api_url = PRIOR_AUTH_API
+        api_url = PRIOR_AUTH_API #Workflow 1
     elif target == "claim":
-        api_url = CLAIMS_API
+        api_url = CLAIMS_API #Workflow 2
     else:
         return {**classification, "routed_to": None, "api_response": "Skipped — classification was unknown"}
 
-    api_response = requests.post(api_url, json=input_obj, timeout=30)
+    api_payload = {
+    "data": {
+        "run_name": "runAlias",
+        "inputs": {
+            "_start_": [
+                {
+                input_obj:input_obj
+                }
+            ]
+        }
+    },
+    "solution_id": "rulesol3"
+    }
+
+    api_response = requests.post(api_url, json=api_payload, timeout=30)
     api_response.raise_for_status()
 
     return {
@@ -43,3 +57,4 @@ Reply ONLY with JSON: {{"classification": "prior_auth|claim|unknown", "confidenc
         "routed_to": target,
         "api_response": api_response.json()
     }
+
