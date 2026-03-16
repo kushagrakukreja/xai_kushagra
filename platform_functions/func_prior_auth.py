@@ -4,7 +4,7 @@ import requests
 PRIOR_AUTH_API = "https://mq-proxy.twenty512.atlantis.xpms.ai/pipeline/dag/execute/workflow_355b9528-d463-48f9-8cc9-76cfe545b03a"
 CLAIMS_API = "https://mq-proxy.twenty512.atlantis.xpms.ai/pipeline/dag/execute/workflow_44f760e9-cabf-47e0-818a-820a2e15f83a"
 
-api_key = "AIzaSyBz7n2qG0DmSVspqQXpRrAScYO4z1hhVKc"
+api_key = "AIzaSyCyzU-iIwmejSp4ekvNc6SFydwEL1s2j2o"
 gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
 
 
