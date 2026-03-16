@@ -39,11 +39,7 @@ Reply ONLY with JSON: {{"classification": "prior_auth|claim|unknown", "confidenc
     "data": {
         "run_name": "runAlias",
         "inputs": {
-            "_start_": [
-                {
-                input_obj:input_obj
-                }
-            ]
+            "_start_": [input_obj]
         }
     },
     "solution_id": "rulesol3"
