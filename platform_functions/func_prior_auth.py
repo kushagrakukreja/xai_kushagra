@@ -1,7 +1,7 @@
 import json
 import requests
 
-GEMINI_API_KEY = "AIzaSyBNWtSErzZGz7o9M9Tggj0LW_uG3uAAfyc"
+GEMINI_API_KEY = "AIzaSyBf_1aXOZjgf1fcEIDXy4_LewYrV5R75pg"
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
 
 def func_prior_auth(config, **input_obj) -> dict:
