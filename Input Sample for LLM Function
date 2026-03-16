@@ -1,0 +1,7 @@
+Prior Auth
+{"request_type": "prior_authorization", "member_id": "MEM123", "procedure_codes": ["27447"], "diagnosis_codes": ["M54.5"], "urgency": "routine", "clinical_notes": "Knee replacement required"}
+
+Claims
+{"claim_id": "CLM-001", "date_of_service": "2024-01-15", "billed_amount": 1500.00, "paid_amount": 960.00, "cpt_code": "99213"}
+
+API Keys -> https://aistudio.google.com/api-keys
